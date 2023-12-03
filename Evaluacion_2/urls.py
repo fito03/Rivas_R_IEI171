@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Socios_APP import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    path('usuario/', views.usuario),
+    path('listado/', views.listado),
+    path('agregar/', views.agregar),
+    path('editar/<int:id>/', views.editar),
+    path('eliminar/<int:id>/', views.eliminar),
 ]
